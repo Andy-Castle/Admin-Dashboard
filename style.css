@@ -50,6 +50,7 @@ header {
   grid-template-columns: 50px 1fr;
   gap: 10px;
   padding: 12px 10px;
+  cursor: pointer;
 }
 
 .menu {
@@ -72,6 +73,10 @@ ul {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   display: grid;
   grid-template-columns: 45px 30px;
@@ -79,6 +84,11 @@ li {
   align-items: center;
 }
 
+li:hover {
+  background-color: #1681bb;
+  cursor: pointer;
+  border-radius: 12px;
+}
 .side-bar {
   padding: 10px;
 }

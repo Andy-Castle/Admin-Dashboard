@@ -69,6 +69,7 @@ li > p {
 
 ul {
   text-decoration: none;
+  list-style: none;
 }
 
 li {

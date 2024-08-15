@@ -20,11 +20,63 @@ main {
     "sidebar mainContent mainContent mainContent mainContent";
 }
 
+/* The start of header */
+
 header {
   grid-area: header;
   background-color: #ffffff;
 }
 
+header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  padding: 10px 30px;
+  /* column-gap: ; */
+}
+
+.search-bar {
+  display: grid;
+  grid-template-columns: 38px 10px;
+  align-items: center;
+}
+
+label > img {
+  height: 25px;
+}
+
+.search-bar > input {
+  border: none;
+  background-color: #e2e8f0;
+  padding: 8px;
+  border-radius: 20px;
+  width: 600px;
+}
+
+.profile-top-rigth .alert {
+  height: 25px;
+}
+
+.profile-top-rigth .account-alert {
+  height: 50px;
+}
+
+.profile-top-rigth > p {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.profile-top-rigth {
+  display: grid;
+  grid-template-columns: 20px 50px 135px;
+  gap: 20px;
+  align-items: center;
+  justify-content: end;
+}
+
+/* This is the end of header */
+
+/*This is the start of sidebar*/
 .side-bar {
   grid-area: sidebar;
   background-color: #1992d4;
@@ -98,3 +150,5 @@ li:hover {
 .side-bar {
   padding: 10px;
 }
+
+/* The end of the sidebar */

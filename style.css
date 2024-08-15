@@ -32,7 +32,7 @@ header {
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   padding: 10px 30px;
-  /* column-gap: ; */
+  row-gap: 5px;
 }
 
 .search-bar {
@@ -50,7 +50,7 @@ label > img {
   background-color: #e2e8f0;
   padding: 8px;
   border-radius: 20px;
-  width: 600px;
+  width: 750px;
 }
 
 .profile-top-rigth .alert {
@@ -69,9 +69,63 @@ label > img {
 .profile-top-rigth {
   display: grid;
   grid-template-columns: 20px 50px 135px;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
   justify-content: end;
+}
+
+.welcome {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  grid-template-areas:
+    "account-welcome Hi"
+    "account-welcome username";
+  padding-bottom: 24px;
+  column-gap: 8px;
+}
+
+.welcome > img {
+  height: 68px;
+}
+
+.account-welcome {
+  grid-area: account-welcome;
+}
+
+.Hi {
+  grid-area: Hi;
+  font-weight: 500;
+}
+
+.username {
+  grid-area: username;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.options > button {
+  color: white;
+  background-color: #1992d4;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.options > button:hover {
+  background-color: #1681bb;
+  cursor: pointer;
+  color: black;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 90px 90px 90px;
+  align-content: space-around;
+  justify-content: end;
+  margin-right: 20px;
+  gap: 35px;
 }
 
 /* This is the end of header */
@@ -80,11 +134,6 @@ label > img {
 .side-bar {
   grid-area: sidebar;
   background-color: #1992d4;
-}
-
-.main-content {
-  grid-area: mainContent;
-  background-color: #e2e8f0;
 }
 
 .logo > img {
@@ -152,3 +201,12 @@ li:hover {
 }
 
 /* The end of the sidebar */
+
+.main-content {
+  grid-area: mainContent;
+  background-color: #e2e8f0;
+}
+
+.main-content {
+  box-shadow: 0px 4px 8px #cfd4db inset;
+}

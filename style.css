@@ -8,8 +8,8 @@
 }
 
 main {
-  height: 100vh;
-  width: 100vw;
+  height: auto;
+  width: 100%;
   display: inline-grid;
   grid-template: 1fr 1fr 1fr 1fr 1fr / 0.8fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
@@ -204,10 +204,78 @@ li:hover {
 
 /* Here starts main-content */
 .main-content {
+  display: grid;
   grid-area: mainContent;
   background-color: #e2e8f0;
+  box-shadow: 0px 4px 8px #cfd4db inset;
+  grid-template-areas:
+    "projects projects projects announcements"
+    "projects projects projects announcements "
+    "projects projects projects trending"
+    "projects projects projects trending";
+  height: auto;
+  width: 100%;
+  padding: 30px 10px 10px 20px; /*Checar esto alrato*/
+  padding-bottom: 45px;
 }
 
-.main-content {
-  box-shadow: 0px 4px 8px #cfd4db inset;
+.projects {
+  grid-area: projects;
+}
+
+.announcements {
+  grid-area: announcements;
+  display: grid;
+  justify-content: end;
+  margin-right: 45px;
+  gap: 15px;
+}
+
+.announcements-container {
+  box-sizing: content-box;
+  display: grid;
+  align-items: end;
+  width: 280px;
+  height: 310px;
+  background-color: #fff;
+  padding: 25px 30px;
+  padding-right: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #aaaeb4;
+}
+
+.announcements-container p {
+  width: 290px;
+}
+
+hr {
+  margin-bottom: 10px;
+  background: #cfd4db;
+  color: #cfd4db;
+}
+
+.trending {
+  grid-area: trending;
+  display: grid;
+  justify-content: end;
+  margin-right: 36px;
+  margin-top: 35px;
+  gap: 15px;
+}
+
+.trending-container {
+  box-sizing: content-box;
+  display: grid;
+  align-items: end;
+  width: 280px;
+  height: 310px;
+  background-color: #fff;
+  padding: 25px 30px;
+  padding-right: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 6px #aaaeb4;
+}
+
+.trending-container {
+  width: 290px;
 }

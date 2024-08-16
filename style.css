@@ -8,10 +8,8 @@
 }
 
 main {
-  height: auto;
   width: 100%;
   display: inline-grid;
-  grid-template: 1fr 1fr 1fr 1fr 1fr / 0.8fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "sidebar header header header header"
     "sidebar mainContent mainContent mainContent mainContent"
@@ -29,16 +27,17 @@ header {
 
 header {
   display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
-  padding: 10px 30px;
-  row-gap: 5px;
+  grid-template-columns: 600px 600px;
+  grid-template-rows: 90px 90px;
+
+  justify-content: center;
 }
 
 .search-bar {
   display: grid;
   grid-template-columns: 38px 10px;
   align-items: center;
+  height: 80px;
 }
 
 label > img {
@@ -67,6 +66,7 @@ label > img {
 }
 
 .profile-top-rigth {
+  height: 80px;
   display: grid;
   grid-template-columns: 20px 50px 135px;
   gap: 40px;

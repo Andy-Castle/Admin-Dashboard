@@ -242,6 +242,7 @@ li:hover {
   padding-right: 40px;
   border-radius: 15px;
   box-shadow: 0px 3px 6px #aaaeb4;
+  align-content: space-between;
 }
 
 .announcements-container p {
@@ -249,7 +250,6 @@ li:hover {
 }
 
 hr {
-  margin-bottom: 10px;
   background: #cfd4db;
   color: #cfd4db;
 }
@@ -266,16 +266,42 @@ hr {
 .trending-container {
   box-sizing: content-box;
   display: grid;
-  align-items: end;
-  width: 280px;
-  height: 310px;
   background-color: #fff;
-  padding: 25px 30px;
-  padding-right: 40px;
+  padding: 20px 28px;
+  padding-right: 35px;
   border-radius: 15px;
   box-shadow: 0px 3px 6px #aaaeb4;
+  row-gap: 20px;
+  margin-right: 5px;
 }
 
 .trending-container {
   width: 290px;
+}
+
+.profiles {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+  grid-template-areas:
+    "account-profile name"
+    "account-profile userprofile";
+  column-gap: 10px;
+}
+
+.profiles > img {
+  height: 65px;
+}
+
+.account-profile {
+  grid-area: account-profile;
+}
+
+.name {
+  grid-area: name;
+  font-weight: bold;
+}
+
+.userprofile {
+  grid-area: userprofile;
 }

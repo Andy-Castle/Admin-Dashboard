@@ -122,7 +122,7 @@ label > img {
 .options {
   display: grid;
   grid-template-columns: 90px 90px 90px;
-  align-content: space-around;
+  align-content: center;
   justify-content: end;
   margin-right: 20px;
   gap: 35px;
@@ -245,6 +245,10 @@ li:hover {
   align-content: space-between;
 }
 
+.announcements-container div:hover {
+  cursor: pointer;
+}
+
 .announcements-container p {
   width: 290px;
 }
@@ -289,6 +293,11 @@ hr {
   column-gap: 10px;
 }
 
+.profiles:hover {
+  background-color: #aaaeb4;
+  border-radius: 15px;
+}
+
 .profiles > img {
   height: 65px;
 }
@@ -304,4 +313,51 @@ hr {
 
 .userprofile {
   grid-area: userprofile;
+}
+
+.main-cards {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 30px;
+  column-gap: 10px;
+}
+
+.card {
+  display: grid;
+  border-left: 10px solid #f0b429;
+  grid-template-areas:
+    "card-title card-title . ."
+    "card-text card-text card-text card-text"
+    ". . . ."
+    ". . . ."
+    ". . . actions";
+  height: 250px;
+  width: 410px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px 25px 20px 25px;
+  box-shadow: 0px 3px 6px #aaaeb4;
+}
+
+.actions a > img {
+  height: 24px;
+}
+
+.card-title {
+  display: flex;
+  grid-area: card-title;
+  align-items: flex-end;
+}
+
+.card-text {
+  grid-area: card-text;
+  padding-right: 40px;
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  align-items: flex-end;
+  column-gap: 25px;
 }
